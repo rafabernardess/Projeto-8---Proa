@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Botão de alternância animado</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="toggle-btn">
+        <div class="icon">
+            <i class='bx bxs-lock-open' ></i>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector(".toggle-btn"),
+        lockIcon = document.querySelector(".icon i");
+
+        toggleBtn.addEventListener("click", () => {
+        toggleBtn.classList.toggle("active");
+
+        if(toggleBtn.classList.contains("active")) {
+           return lockIcon.classList.replace("bx bxs-lock-open", "bx bxs-lock");
+        }
+        lockIcon.classList.replace("bx bxs-lock", "bx bxs-lock-open");
+        });
+    </script>
+</body>
+</html>
